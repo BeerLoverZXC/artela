@@ -7,48 +7,54 @@ ENV HOME=/app
 
 WORKDIR /app
 
-ENV MONIKER="Stake_Shark"
-ENV STORY_CHAIN_ID="odyssey"
-ENV STORY_PORT="52"
+ENV MONIKER="StakeShark"
+ENV ARTELA_CHAIN_ID="artela_11822-1"
+ENV ARTELA_PORT="30"
 ENV GO_VER="1.22.3"
 ENV PATH="/usr/local/go/bin:/app/go/bin:${PATH}"
-ENV SEEDS="434af9dae402ab9f1c8a8fc15eae2d68b5be3387@story-testnet-seed.itrocket.net:29656"
-ENV PEERS="c2a6cc9b3fa468624b2683b54790eb339db45cbf@story-testnet-peer.itrocket.net:26656,02e9fac0fab468724db00e5e3328b2cbca258fdc@95.217.193.182:26656,5c001659b68370e7198e9c6c72bfc4c3c15dba41@211.218.55.32:50656,e1245ea24138ff16ca144962f72146d6afcbfe15@221.148.45.118:26656,34400e930af9ff63a0c2c2d1b036a8763e7c92e1@158.220.126.24:52656,959ef7ebaaacd08de053e738707d3a2940f846a4@148.72.138.5:26656,5531e438ecd2e0b0d2700e68b2ba8066eb02d2d7@185.133.251.245:656,29d7d1d203ccf8c9afe593eab7bee485f1e6bbfa@37.252.186.234:26656,bf975933a1169221e3bd04164a7ba9abc5d164c8@3.16.175.31:26656,f0e8398215663070d0d65ea6478f61688228d9d9@3.146.164.199:26656,04e5734295da362f09a61dd0a9999449448a0e5c@52.14.39.177:26656,046909534c2849ff8dccc15ee43ee63d2c60b21c@54.190.123.194:26656,9e2fabda41e3c3317c25f5ef6c604c1d78370aba@50.112.252.101:26656,b954afe1c26b82cf0628642c82ffee13e108387d@165.154.225.142:26656,bd58bf29180f476bd250af22d6026559d7eff289@146.59.118.198:26656,0ae60326fa7f01500a94dd7f0d2571fbba46cd10@167.235.39.5:17656,8b241f57d1375205aa4a17d038f9825a516ccbc5@88.99.252.213:36656,466291d2485a4a4adbafdc913ef23b1286d1b110@144.76.92.22:26656,2fe77b469daa58e26bb96e0ea6208856fa59e548@192.64.87.158:26656,7ecb96bb4778b3f979be7c8e720cc9ee739ac770@104.198.43.15:26656,39ef8bba040a71d6914359ba0f6f8490f7716c35@45.61.156.53:26656,73aafbaefe85e64a3eb0c6e23b3935bc308d77db@142.132.135.125:20656,2e65e5de93cb19ee35b1e82af7f874043a1f5d83@185.133.251.252:656,8ff41ff3354241f608ba15ccd224ff6fb7393dd7@135.181.60.149:26656,c5c214377b438742523749bb43a2176ec9ec983c@176.9.54.69:26656,fa294c4091379f84d0fc4a27e6163c956fc08e73@65.108.103.184:26656,75ac7b193e93e928d6c83c273397517cb60603c0@3.142.16.95:26656,356847ca14f13b9b38d13bfaf7751ae74cc2919b@65.21.210.147:26656,443896c7ec4c695234467da5e503c78fcd75c18e@80.241.215.215:26656,e8317a671abf0af33eb712045f368ac5f335d690@2.56.246.4:18656,176325c2f78f146fb09bebc6c287f430654b448c@84.247.174.15:656"
-
+ENV WALLET="wallet"
+ENV SEEDS="8d0c626443a970034dc12df960ae1b1012ccd96a@artela-testnet-seed.itrocket.net:30656"
+ENV PEERS="5c9b1bc492aad27a0197a6d3ea3ec9296504e6fd@artela-testnet-peer.itrocket.net:30656,e0c08d7623b2a0dc5d37e01e201055c00fff6b9d@5.189.162.179:45656,5587fc6a4cff834889e5affcb3d8eaad081b9e00@94.16.31.24:3456,9f29f4650810677a60b59a8fd363a58e4265ce50@91.230.110.117:26656,866cdfa0596fc40b14b0817f7ed3497c6a17f397@162.55.65.137:15856,60d4977008644f80bd7ea2961ca1c66894ffbd15@5.189.162.161:26656,4866a0d0ada3995058d36c2c1da1af22c5bc52e6@85.190.246.221:3456,24c6dc1031a364336f557d9179fc1fd4ed20a283@45.92.9.164:3456,a90dc6bfc3caf47344173971dcac67401a6dca43@185.246.87.105:13056,e206ede4368eb16962e7fdeda3a1af5a9e2378e5@37.60.224.47:3456,55e03f7dab4288c3dc3e93257f4e063c862f0561@109.199.124.254:26656,ecb580bc54b7f14618d54ccf263b9b6baff1e2d8@89.58.53.98:26656,f98c45802e0e756f3e5e06e6cd3259e03182b44a@75.119.154.23:26656,2f3b9357487f5bc603b36099e583d4fb22e8a065@156.67.31.31:23456,0f5a4ad942c2bb222362e7cb92f11f0f474a0f6d@45.136.17.29:3456,64af6870f342899bfc475da28ce4bb16b0e62f23@161.97.151.149:3456,a08fd83e62646deb0ea95456fab4d6c3614c80f9@109.199.105.155:30656,844377056c31f227cfb0759c29df9f239c284386@209.145.48.72:45656,5c4ea81ac7b8a7f5202fcbe5fe790a6d6f61fb22@47.251.14.108:26656,8889b28795e8be109a532464e5cc074e113de780@47.251.54.123:26656,0172eec239bb213164472ea5cbd96bf07f27d9f2@47.251.14.47:26656"
 
 RUN wget "https://golang.org/dl/go$GO_VER.linux-amd64.tar.gz" && \
 tar -C /usr/local -xzf "go$GO_VER.linux-amd64.tar.gz" && \
 rm "go$GO_VER.linux-amd64.tar.gz" && \
 mkdir -p go/bin && \
-mkdir -p "$HOME/.story/story" && \
-mkdir -p "$HOME/.story/geth"
 
-RUN wget -O geth https://github.com/piplabs/story-geth/releases/download/v0.10.0/geth-linux-amd64 && \
-chmod +x $HOME/geth && \
-mv $HOME/geth /app/go/bin/
+RUN git clone https://github.com/artela-network/artela && \
+cd artela && \
+git checkout main && \
+make install
 
-RUN git clone https://github.com/piplabs/story && \
-cd story && \
-git checkout v0.12.1 && \
-go build -o story ./client && \
-mv $HOME/story/story $HOME/go/bin/
-
-RUN story init --moniker stake_shark --network odyssey —chain-id 1513
+RUN artelad config node tcp://localhost:${ARTELA_PORT}657 && \
+artelad config keyring-backend os && \
+artelad config chain-id artela_11822-1 && \
+artelad init "StakeShark" --chain-id artela_11822-1
 
 RUN sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
-       -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.story/story/config/config.toml && \
-sed -i.bak -e "s%:1317%:${STORY_PORT}317%g; \
-s%:8551%:${STORY_PORT}551%g" $HOME/.story/story/config/story.toml && \
-sed -i.bak -e "s%:26658%:${STORY_PORT}658%g; \
-s%:26657%:${STORY_PORT}657%g; \
-s%:26656%:${STORY_PORT}656%g; \
-s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${STORY_PORT}656\"%; \
-s%:26660%:${STORY_PORT}660%g" $HOME/.story/story/config/config.toml && \
-sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.story/story/config/config.toml && \
-sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.story/story/config/config.toml
+       -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.artelad/config/config.toml && \
+sed -i.bak -e "s%:1317%:${ARTELA_PORT}317%g; \
+s%:8080%:${ARTELA_PORT}080%g; \
+s%:9090%:${ARTELA_PORT}090%g; \
+s%:9091%:${ARTELA_PORT}091%g; \
+s%:8545%:${ARTELA_PORT}545%g; \
+s%:8546%:${ARTELA_PORT}546%g; \
+s%:6065%:${ARTELA_PORT}065%g" $HOME/.artelad/config/app.toml && \
+sed -i.bak -e "s%:26658%:${ARTELA_PORT}658%g; \
+s%:26657%:${ARTELA_PORT}657%g; \
+s%:6060%:${ARTELA_PORT}060%g; \
+s%:26656%:${ARTELA_PORT}656%g; \
+s%^external_address = \"\"%external_address = \"$(wget -qO- eth0.me):${ARTELA_PORT}656\"%; \
+s%:26660%:${ARTELA_PORT}660%g" $HOME/.artelad/config/config.toml && \
+sed -i -e "s/^pruning *=.*/pruning = \"custom\"/" $HOME/.artelad/config/app.toml && \
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"1000\"/" $HOME/.artelad/config/app.toml && \
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"10\"/" $HOME/.artelad/config/app.toml && \
+sed -i 's|minimum-gas-prices =.*|minimum-gas-prices = "0.025art"|g' $HOME/.artelad/config/app.toml && \
+sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.artelad/config/config.toml && \
+sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.artelad/config/config.toml
 
-RUN wget -O $HOME/.story/story/config/genesis.json https://server-3.itrocket.net/testnet/story/genesis.json && \
-wget -O $HOME/.story/story/config/addrbook.json  https://server-3.itrocket.net/testnet/story/addrbook.json
+RUN wget -O $HOME/.artelad/config/genesis.json https://server-4.itrocket.net/testnet/artela/genesis.json && \
+wget -O $HOME/.artelad/config/addrbook.json  https://server-4.itrocket.net/testnet/artela/addrbook.json
 
 
 RUN echo '#!/bin/sh' > /app/entrypoint.sh && \
