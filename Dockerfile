@@ -19,7 +19,7 @@ ENV PEERS="5c9b1bc492aad27a0197a6d3ea3ec9296504e6fd@artela-testnet-peer.itrocket
 RUN wget "https://golang.org/dl/go$GO_VER.linux-amd64.tar.gz" && \
 tar -C /usr/local -xzf "go$GO_VER.linux-amd64.tar.gz" && \
 rm "go$GO_VER.linux-amd64.tar.gz" && \
-mkdir -p go/bin && \
+mkdir -p go/bin
 
 RUN git clone https://github.com/artela-network/artela && \
 cd artela && \
