@@ -5,8 +5,8 @@ services:
       dockerfile: Dockerfile
     container_name: artela-node
     ports:
-      - "26656:26656"
-      - "26660:26660"
+      - "30656:30656"
+      - "30660:30660"
     restart: unless-stopped
     volumes:
       - artela_volume:/app/.artelad
