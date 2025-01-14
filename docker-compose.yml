@@ -9,7 +9,7 @@ services:
       - "26660:26660"
     restart: unless-stopped
     volumes:
-      - artela_volume:/app/.artela
+      - artela_volume:/app/.artelad
       - ./entrypoint.sh:/app/entrypoint.sh
       - artela_bin:/app/go
 
