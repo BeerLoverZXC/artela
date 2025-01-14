@@ -1,0 +1,18 @@
+services:
+  node-artela:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: artela-node
+    ports:
+      - "26656:26656"
+      - "26660:26660"
+    restart: unless-stopped
+    volumes:
+      - artela_volume:/app/.artela
+      - ./entrypoint.sh:/app/entrypoint.sh
+      - artela_bin:/app/go
+
+volumes:
+  artela_volume:
+  artela_bin:
